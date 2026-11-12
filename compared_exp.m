@@ -24,7 +24,7 @@ if ~exist(total_results_dir, 'dir')
     mkdir(total_results_dir);
 end
 rn = 10;
-for d_ind =2:numdatas
+for d_ind =1:numdatas
     data = datasets(d_ind);
     
     % load data
@@ -68,7 +68,7 @@ for d_ind =2:numdatas
                 opts.X = X;
                 opts.XtX = X'*X;
                 opts.max_iter = 3000;
-                opts.tol = 1e-3;
+                opts.tol = 1e-4;
                 opts.labels = Y;
                 bse_mm_time = [];
                 k_init = 10;
